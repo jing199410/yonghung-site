@@ -13,20 +13,15 @@
     body {
       margin: 0;
       font-family: 'Noto Sans TC', sans-serif;
-      background: linear-gradient(-45deg, #0f2027, #203a43, #2c5364, #1a2a3a);
-      background-size: 600% 600%;
-      animation: gradientBG 20s ease infinite;
-      color: #f5f5f5;
+      background: #000;
+      background-image: radial-gradient(circle at center, rgba(255,0,0,0.1) 0%, transparent 80%), repeating-linear-gradient(45deg, rgba(255,0,0,0.05) 0px, rgba(255,0,0,0.05) 1px, transparent 1px, transparent 20px);
+      background-size: cover;
+      color: #ffffff;
       scroll-behavior: smooth;
       overflow-x: hidden;
     }
-    @keyframes gradientBG {
-      0% {background-position: 0% 50%;}
-      50% {background-position: 100% 50%;}
-      100% {background-position: 0% 50%;}
-    }
     header {
-      background: #1f1f1fcc;
+      background: rgba(20, 0, 0, 0.85);
       padding: 1rem 2rem;
       position: fixed;
       width: 100%;
@@ -36,9 +31,10 @@
       justify-content: space-between;
       align-items: center;
       backdrop-filter: blur(6px);
+      box-shadow: 0 2px 10px rgba(255, 0, 0, 0.2);
     }
     nav a {
-      color: #f5f5f5;
+      color: #ff4d4d;
       margin: 0 1rem;
       text-decoration: none;
     }
@@ -50,8 +46,9 @@
     .section-title {
       font-size: 2rem;
       margin-bottom: 1rem;
-      border-bottom: 2px solid #f5f5f5;
+      border-bottom: 2px solid #ff4d4d;
       display: inline-block;
+      text-shadow: 0 0 5px red;
     }
     .services, .testimonials {
       display: grid;
@@ -59,16 +56,21 @@
       gap: 1.5rem;
     }
     .card {
-      background: #1e1e1ecc;
+      background: rgba(40, 0, 0, 0.85);
       padding: 1.5rem;
       border-radius: 8px;
-      box-shadow: 0 0 8px rgba(255, 255, 255, 0.1);
+      box-shadow: 0 0 15px rgba(255, 0, 0, 0.2);
       text-align: center;
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+    .card:hover {
+      transform: scale(1.03);
+      box-shadow: 0 0 25px rgba(255, 50, 50, 0.6);
     }
     footer {
       text-align: center;
       padding: 2rem;
-      background: #1f1f1fcc;
+      background: rgba(20, 0, 0, 0.85);
       font-size: 0.9rem;
     }
     form input, form textarea, form button {
@@ -79,17 +81,19 @@
       border-radius: 4px;
     }
     form input, form textarea {
-      background: #2e2e2e;
+      background: #1a0000;
       color: #fff;
     }
     form button {
-      background-color: #00b894;
+      background-color: #ff1a1a;
       color: #fff;
       cursor: pointer;
+      box-shadow: 0 0 10px rgba(255,0,0,0.5);
     }
     .logo {
       font-weight: bold;
-      color: #00cec9;
+      color: #ff4d4d;
+      text-shadow: 0 0 5px red;
     }
     @media (max-width: 768px) {
       nav {
@@ -147,7 +151,7 @@
   <section id="contact" data-aos="fade-up">
     <h2 class="section-title">聯絡我們</h2>
     <p>若有任何需求，請填寫下方表單，我們將盡快與您聯絡。</p>
-    <p><a href="https://forms.gle/your-google-form-link" target="_blank" style="color:#00cec9">➡ 點我填寫聯絡表單</a></p>
+    <p><a href="https://forms.gle/your-google-form-link" target="_blank" style="color:#ff4d4d">➡ 點我填寫聯絡表單</a></p>
     <form>
       <input type="text" placeholder="姓名">
       <input type="email" placeholder="信箱">
@@ -162,7 +166,10 @@
 
   <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
   <script>
-    AOS.init({ duration: 1000, once: true });
+    AOS.init({
+      duration: 1000,
+      once: true
+    });
   </script>
 </body>
 </html>
