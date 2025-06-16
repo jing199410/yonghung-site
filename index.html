@@ -1,2 +1,186 @@
 <!DOCTYPE html>
-    <!-- 以下省略，會從 Canvas 複製 -->
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>泳汯工作室</title>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;700&display=swap" rel="stylesheet">
+  <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Noto Sans TC', sans-serif;
+      background-color: #121212;
+      color: #f5f5f5;
+      scroll-behavior: smooth;
+    }
+    header {
+      background: #1f1f1f;
+      padding: 1rem 2rem;
+      position: fixed;
+      width: 100%;
+      top: 0;
+      z-index: 999;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    nav a {
+      color: #f5f5f5;
+      margin: 0 1rem;
+      text-decoration: none;
+    }
+    section {
+      padding: 6rem 2rem 3rem;
+      max-width: 960px;
+      margin: auto;
+    }
+    .section-title {
+      font-size: 2rem;
+      margin-bottom: 1rem;
+      border-bottom: 2px solid #f5f5f5;
+      display: inline-block;
+    }
+    .services, .products, .testimonials {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 1.5rem;
+    }
+    .card {
+      background: #1e1e1e;
+      padding: 1.5rem;
+      border-radius: 8px;
+      box-shadow: 0 0 8px rgba(255, 255, 255, 0.1);
+      text-align: center;
+    }
+    .card img {
+      width: 80px;
+      height: 80px;
+      margin-bottom: 1rem;
+    }
+    footer {
+      text-align: center;
+      padding: 2rem;
+      background: #1f1f1f;
+      font-size: 0.9rem;
+    }
+    form input, form textarea, form button {
+      width: 100%;
+      margin: 0.5rem 0;
+      padding: 0.8rem;
+      border: none;
+      border-radius: 4px;
+    }
+    form input, form textarea {
+      background: #2e2e2e;
+      color: #fff;
+    }
+    form button {
+      background-color: #00b894;
+      color: #fff;
+      cursor: pointer;
+    }
+    .logo {
+      font-weight: bold;
+      color: #00cec9;
+      display: flex;
+      align-items: center;
+    }
+    .logo img {
+      height: 32px;
+      margin-right: 8px;
+    }
+    @media (max-width: 768px) {
+      nav {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+      }
+      header {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="logo">
+      <img src="images/logo.png" alt="logo">
+      泳汯工作室
+    </div>
+    <nav>
+      <a href="#about">關於我們</a>
+      <a href="#services">服務項目</a>
+      <a href="#products">作品展示</a>
+      <a href="#testimonials">推薦評語</a>
+      <a href="#contact">聯絡我們</a>
+    </nav>
+  </header>
+
+  <section id="about" data-aos="fade-up">
+    <h2 class="section-title">關於我們</h2>
+    <p>泳汯工作室致力於提供高效率的遊戲代購、資訊查詢、數位內容整理等專業服務。我們用心處理每一位顧客的需求，打造最順暢的數位體驗。</p>
+  </section>
+
+  <section id="services" data-aos="fade-up">
+    <h2 class="section-title">服務項目</h2>
+    <div class="services">
+      <div class="card">
+        <img src="images/game.png" alt="遊戲代購">
+        <strong>遊戲代購</strong><br>Steam、PSN、任天堂等各大平台充值與帳號代購。
+      </div>
+      <div class="card">
+        <img src="images/content.png" alt="數位內容處理">
+        <strong>數位內容處理</strong><br>Excel 自動化、報表設計、Notion 客製頁面。
+      </div>
+      <div class="card">
+        <img src="images/custom.png" alt="客製服務">
+        <strong>客製服務</strong><br>表單設計、Discord BOT 協助、資訊工具推薦。
+      </div>
+    </div>
+  </section>
+
+  <section id="products" data-aos="fade-up">
+    <h2 class="section-title">作品展示</h2>
+    <div class="products">
+      <div class="card">🎮 Steam 點數卡設計封面</div>
+      <div class="card">📊 Excel 自動報表模板</div>
+      <div class="card">🧾 Notion 客製化專案頁面</div>
+    </div>
+  </section>
+
+  <section id="testimonials" data-aos="fade-up">
+    <h2 class="section-title">推薦評語</h2>
+    <div class="testimonials">
+      <div class="card">「Notion 客製頁面比預期還強大，效率提升很多～」</div>
+      <div class="card">「本來不會用 Discord，他一步一步幫我架設起來，讚」</div>
+      <div class="card">「回覆很快，還幫我順便解鎖日版帳號，超貼心！」</div>
+    </div>
+  </section>
+
+  <section id="contact" data-aos="fade-up">
+    <h2 class="section-title">聯絡我們</h2>
+    <p>若有任何需求，請填寫下方表單，我們將盡快與您聯絡。</p>
+    <p><a href="https://forms.gle/your-google-form-link" target="_blank" style="color:#00cec9">➡ 點我填寫聯絡表單</a></p>
+    <form>
+      <input type="text" placeholder="姓名">
+      <input type="email" placeholder="信箱">
+      <textarea rows="5" placeholder="想說的話"></textarea>
+      <button type="submit">送出</button>
+    </form>
+  </section>
+
+  <footer>
+    © 2025 泳汯工作室. 統編：00851737
+  </footer>
+
+  <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+  <script>
+    AOS.init({
+      duration: 1000,
+      once: true
+    });
+  </script>
+</body>
+</html>
